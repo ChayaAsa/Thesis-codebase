@@ -1,0 +1,120 @@
+# ==========================================
+# Git Ignore File for Thesis Code Base
+# (Python, PyTorch, MATLAB/Simulink, C/C++)
+# ==========================================
+
+# --- Python & Bytecode ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# --- Virtual Environments ---
+venv/
+venv*/
+env/
+env*/
+.venv/
+.env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Build & Distribution Artifacts ---
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- Jupyter Notebook & Test Caches ---
+.ipynb_checkpoints
+*-checkpoint.ipynb
+.ipython/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# --- Compiled Binaries & C/C++ Extensions ---
+*.o
+*.obj
+*.dll
+*.dylib
+*.lib
+*.a
+*.exe
+
+# --- Machine Learning Models & Large Data Checkpoints ---
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.pb
+*.tflite
+*.safetensors
+*.bin
+*.pkl
+*.pickle
+*.npy
+*.npz
+
+# --- MATLAB & Simulink Temporary Files ---
+slprj/
+*.asv
+*.autosave
+*.slxc
+*.mex*
+
+# --- Logs, Temporary & Backup Files ---
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# --- Environment Files & Secrets ---
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.key
+secrets.json
+
+# --- Editor & IDE Files ---
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.sln
+*.user
+
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini

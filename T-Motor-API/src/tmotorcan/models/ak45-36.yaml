@@ -1,0 +1,28 @@
+# CubeMars AK45-10 — MIT CAN mode parameter ranges
+# Source: CubeMars datasheet + AK Series Driver Manual V1.0.18
+#
+# T_MIN/T_MAX is the firmware's encoding range for the t_ff field.
+# The wire value is output torque in N·m — the firmware converts to Iq internally.
+# These values must match what the motor firmware expects.
+
+# CAN frame encoding ranges (must match firmware)
+p_min: -12.5    # rad       (16-bit resolution)
+p_max:  12.5
+v_min: -6.0    # rad/s     (12-bit resolution)
+v_max:  6.0
+t_min:  -34.0    # N·m       (12-bit resolution) — peak output torque per CubeMars datasheet
+t_max:   34.0
+kp_min:  0.0    # N·m/rad   (12-bit resolution)
+kp_max: 500.0
+kd_min:  0.0    # N·m·s/rad (12-bit resolution)
+kd_max:  5.0
+
+# Motor physical constants
+gear_ratio:  36.0  # 36:1 reduction
+kt:           0.11 # N·m/A  motor-side torque constant (CubeMars datasheet)
+                   # output-shaft effective Kt = kt × gear_ratio = 1.27 N·m/A
+                   # sanity: 5 A (peak) × 1.27 ≈ 6.35 N·m ≈ 7 N·m peak torque ✓
+pole_pairs:  14    # electrical pole pairs (42 poles / 2) — used for ERPM conversion
+
+# Safety defaults
+max_temp: 80       # °C — raise MotorFaultError above this temperature

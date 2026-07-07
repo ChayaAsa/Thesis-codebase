@@ -1,0 +1,16 @@
+{
+  "model_tag": "phys_1d",
+  "eval_csv": "train_phaseB_20260702_055246.csv",
+  "n_rows": 5312,
+  "n_valid": 5213,
+  "window_len": 100,
+  "metrics": {
+    "f_push_N": {
+      "mae_N": 0.9982272982597351,
+      "rmse_N": 1.1211696863174438,
+      "r2": 0.8309956192970276,
+      "lag_ms": 0.0,
+      "max_err_N": 3.0526010990142822
+    }
+  }
+}

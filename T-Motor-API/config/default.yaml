@@ -1,0 +1,22 @@
+# MotorConfig — default single-motor rig
+# Load with:  cfg = MotorConfig.load('config/default.yaml')
+
+bus:
+  interface: seeedstudio
+  channel: COM4
+  bitrate: 1000000
+
+motors:
+  - id: 1
+    model: AK45-10
+    max_temp: 80
+    kp: 2.0
+    kd: 0.1
+    # limits:                    # uncomment to enable soft limits
+    #   position: [-6.28, 6.28]  # rad  (±1 full revolution)
+    #   torque:   [-5.0,  5.0]   # N·m
+
+loop:
+  dt: 0.05       # seconds  (20 Hz)
+  fade: 0.5      # seconds  Ctrl+C torque ramp-down
+  report: true   # print timing stats on exit
